@@ -1,0 +1,109 @@
+/* Hero.css */
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 230px 20px;
+  color: black;
+  /* Default text color */
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  /* Apply opacity to the background image */
+  z-index: -1;
+  /* Place behind the content */
+}
+
+.hero-content {
+  max-width: 50%;
+  z-index: 1;
+  /* Ensure text is above the background image */
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.dream {
+  color: #ff9100;
+  text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px rgb(255, 255, 255);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.second-content img {
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  /* Centering the image */
+  border-radius: 10px;
+  /* Optional: Add some rounding to the image corners */
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,74 @@
+/* PropertyTypes.css */
+
+.property-types {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(140deg, #3b3b3b, #f8890b);
+}
+
+.property-types-title {
+    font-size: 2.5rem;
+    margin-top: 0px;
+    color: #ffffff;
+    /* Darker color for the title */
+}
+
+.cards-container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.cards-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('sectionbg.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    opacity: 0.5;
+    /* Adjust the opacity as needed */
+    z-index: 1;
+}
+
+.property-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    margin: 20px;
+    transition: transform 0.3s ease;
+    z-index: 2;
+    /* Ensure cards appear above the background overlay */
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+    /* Lift the card on hover */
+}
+
+.property-image {
+    width: 100%;
+    height: auto;
+}
+
+.property-title {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #007bff;
+    /* Primary color for title */
+}
+
+.property-description {
+    padding: 0 20px 20px;
+    color: #555;
+    /* Subtle color for description */
+}
